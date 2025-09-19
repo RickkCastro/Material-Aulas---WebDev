@@ -5,33 +5,38 @@ import Usuarios from "../pages/Usuarios";
 import Relatorios from "../pages/Relatorios";
 import Configuracoes from "../pages/Configuracoes";
 import PageNotFound from "../pages/PageNotFound";
+import Teams from "../pages/Teams";
 
 export const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <AdminLayout />,
-    errorElement: <PageNotFound />, 
-    children: [
-      {
-        index: true,
-        element: <Dashboard />,
-      },
-      {
-        path: "dashboard",
-        element: <Dashboard />,
-      },
-      {
-        path: "usuarios",
-        element: <Usuarios />,
-      },
-      {
-        path: "relatorios",
-        element: <Relatorios />,
-      },
-      {
-        path: "configuracoes",
-        element: <Configuracoes />,
-      },
-    ],
-  },
+    {
+        path: "/",
+        element: <AdminLayout />,
+        errorElement: <PageNotFound />,
+        children: [
+            {
+                index: true,
+                element: <Dashboard />,
+            },
+            {
+                path: "dashboard",
+                element: <Dashboard />,
+            },
+            {
+                path: "usuarios",
+                element: <Usuarios />,
+            },
+            {
+                path: "relatorios",
+                element: <Relatorios />,
+            },
+            {
+                path: "configuracoes",
+                element: <Configuracoes />,
+            },
+            {
+                path: "times",
+                element: <Teams />,
+            },
+        ],
+    },
 ]);
